@@ -1,0 +1,213 @@
+html {
+	font-family: 'Quicksand', cursive;
+	font-size: 20px;
+}
+
+p {
+	margin: 10px 0 10px 0;
+}
+
+body {
+	margin: 0px;
+
+}
+
+nav {
+	background-color: #b8f8d4;
+	box-shadow: none;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.nav-menu li {
+	font-size: 22px;
+	font-weight: bold;
+	padding: 0 40px 0 40px;
+}
+
+.fancy-name {
+	text-align: center;
+}
+
+.section-intro {
+  padding-bottom: 150px;
+}
+
+.kouros-arrow {
+	position: absolute;
+	margin-top: -40px;
+	margin-left: 310px;
+  border-left: 20px solid #BBE2F5;
+  border-bottom: 20px solid #BBE2F5;
+  width: 0px;
+  animation-name: kouros-arrow-vert-animate, kouros-arrow-hor-animate;
+  animation-delay: 0s, .5s;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes kouros-arrow-vert-animate {
+	from {height: 0px;}
+	to {height: 200px;}
+}
+
+@keyframes kouros-arrow-hor-animate {
+	from {width: 0px;}
+	to {width: 390px;}
+}
+
+.codes-arrow {
+	margin-top: -220px;
+	z-index: -1;
+	position: relative;
+	border-right: 20px solid #BBE2F5;
+  border-bottom: 20px solid #BBE2F5;
+	margin-left: 544px;
+	animation-name: codes-arrow-vert-animate;
+	animation-duration: .5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes codes-arrow-vert-animate {
+	from {height: 0px;}
+	to {height: 382px}
+}
+
+.codes-arrow-hor {
+
+	position: relative;
+	z-index: -1;
+  border-right: 20px solid #BBE2F5;
+	border-bottom: 20px solid #BBE2F5;
+	animation-name: codes-arrow-hor-animate, codes-arrow-hor-adjust, code-arrow-display;
+	animation-duration: .5s, .5s, .6s;
+	animation-delay: .5s;
+	animation-fill-mode: forwards;
+	margin-left: 544px;
+	margin-top: -20px;
+}
+
+@keyframes codes-arrow-hor-animate {
+  from {width: 0px;}
+	to {width: 628px;}
+}
+
+@keyframes codes-arrow-hor-adjust {
+  from {margin-left: 544px;}
+	to {margin-left: -64px;}
+}
+
+@keyframes code-arrow-display {
+	from {display: none;}
+	to {display: inline;}
+}
+
+.arrow-left {
+	position: relative;
+	margin-left: -75px;
+	margin-top: -40px;
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  animation-name: arrowhead;
+	animation-duration: .2s;
+	animation-delay: .85s;
+  border-right: 30px solid #BBE2F5;
+	transform: scale(.01);
+	animation-fill-mode: forwards;
+}
+
+.arrow-right {
+	position: relative;
+	margin-left: 370px;
+	margin-top: 159px;
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  animation-name: arrowhead;
+	animation-duration: .2s;
+	animation-delay: .85s;
+  border-left: 30px solid #BBE2F5;
+	transform: scale(.01);
+	animation-fill-mode: forwards;
+}
+
+@keyframes arrowhead {
+	from {transform: scale(.01)}
+	to {transform: scale(1)}
+}
+
+.img-face {
+	float: right;
+	border-radius: 50%;
+	margin-right: 125px;
+	border-style: solid;
+	border-width: 10px;
+	border-color: white;
+}
+
+.main-container {
+	width: 1200px;
+	display: block;
+
+	height: auto;
+	padding: 0 20px 0 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.projects-section {
+	margin-top: 130px;
+	font-family: Poiret One;
+	font-size: 80px;
+	margin-bottom: 0px;
+}
+
+.project-name{
+	margin: 50px 0 0px 0;
+}
+
+.project-container {
+	margin: auto;
+	display: flex;
+}
+
+.project-info {
+	flex: 3;
+	width: 100%;
+	margin-right: 40px;
+}
+
+.project-picture {
+	flex: 2;
+	min-width: 0;
+}
+
+
+
+.collapsible-header {
+	padding: 15px 15px 15px 15px;
+}
+
+.collapsible-body {
+	padding: 15px 25px 15px 25px;
+}
+
+.collapsible-header:hover {
+	background-color: #e8fcf1;
+}
+.collapsible-header.active {
+	background-color: #e8fcf1;
+}
+
+
+.job-duration{
+	float: right;
+}
+
+.job-content li{
+	list-style-type: circle !important;
+	list-style-position: inside;
+}

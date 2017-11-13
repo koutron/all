@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+
+      <h1>
+        Timestamp Microservice
+      </h1>
+      <p>User Story: I can pass a string as a parameter,
+        and it will check to see whether that string contains either a unix
+        timestamp or a natural language date (example: January 1, 2016).</P>
+
+<p>User Story: If it does, it returns both the Unix timestamp and the natural language form of that date.</p>
+
+<p>User Story: If it does not contain a date or Unix timestamp, it returns null for those properties.</p>
+
+        <p>The date is entered and the end of the URL after 'timestamp/'.</p>
+
+
+        <p>Example input (Seperated with spaces): <span id="date">...timestamp/</span><br><br>
+          <script>
+        $( document ).ready(function() {
+         let today = new Date();
+          today = today.toString().slice(4, 15);
+         $('#date').append(today);
+        });
+         </script>
+        Example input: ...timestamp/1502136043</p>
+      </p>
+
+
+    <main>
+
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+
+    </main>
+  </body>
+</html>
