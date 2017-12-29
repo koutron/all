@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fcc = require('../fcc/server.js');
+const email = require('./email.js');
 const app = express();
 
 app.use(express.static(path.join(__dirname, '/../portfolio')));
@@ -13,10 +14,22 @@ app.get('/reactube', function(req, res) {
 	res.sendFile(path.join(__dirname, '/../reactube', 'build', 'index.html'));
 });
 
+app.use('weather', express.static(path.join(__dirname, '/../weather', 'build')));
+app.get('/weather', function(req, res) {
+	res.sendFile(path.join(__dirname, '/../weather', 'build', 'index.html'));
+});
+
 app.use('/mailerdemon', (req, res) => {
         res.redirect('http://www.kouroscodes.com:9000');
 });
 
+app.use(express.static(path.join(__dirname, '/../portfolio')));
+app.get('/thankyou', function(req, res) {
+	res.sendFile(path.join(__dirname, '/../portfolio', 'thankyou.html'));
+});
+
+app.use('/message', email);
+
 app.use('/fcc', fcc);
 
-app.listen(8080);
+app.listen(80);
